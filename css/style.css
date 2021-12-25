@@ -1,0 +1,118 @@
+body {
+    direction: rtl;
+    box-sizing: border-box;
+    font-family: 'Vazir', sans-serif;
+    background-color: #E6EBEC;
+}
+
+.row {
+    height: 100vh;
+}
+
+.form-control::placeholder {
+    font-size: 10px;
+}
+
+.form-control:focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+.content-box {
+    background-color: #FAFAFA;
+    border-radius: 50px;
+    box-shadow: 12px 12px 25px 10px #b8c4c7, inset 0px 0px 10px 0px #b8c4c7;
+}
+
+.content-progressbar {
+    height: 180px;
+    width: 180px;
+    background-color: transparent;
+    position: relative;
+    box-shadow: 5px 5px 10px 5px #f1f1f1, -1px -1px 10px 5px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.circular {
+    height: 150px;
+    width: 150px;
+    background-color: transparent;
+    position: relative;
+}
+
+.circular .inner {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 50%;
+    left: 50%;
+    background-color: #FAFAFA;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    z-index: 6;
+}
+
+.inner .number {
+    font-size: 20px;
+    color: #586771;
+    width: 100px;
+    padding: 0.1rem 0;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    box-shadow: 5px 4px 6px 2px #f1f1f1, -5px -4px 6px 2px #ffffff, inset 3px 2px 6px 1px #f1f1f1, inset -3px -2px 6px 2px #ffffff;
+}
+
+.circle .bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #EEEEEE;
+    clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle .bar .progressbar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #EA4D4C;
+    clip: rect(0px, 75px, 150px, 0px);
+}
+
+.circle .right .progressbar {
+    z-index: 1;
+    animation: right 4s linear both;
+}
+
+@keyframes right {
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.circle .left {
+    z-index: 1;
+    transform: rotate(180deg);
+}
+
+.circle .left .progressbar {
+    animation: left 4s linear both;
+    animation-delay: 4s;
+}
+
+@keyframes left {
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
