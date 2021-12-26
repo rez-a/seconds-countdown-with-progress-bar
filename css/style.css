@@ -91,15 +91,17 @@ body {
     clip: rect(0px, 75px, 150px, 0px);
 }
 
-.circle .right .progressbar {
-    z-index: 1;
-    animation: right 4s linear both;
+.circle .progressbar {
+    transition: all 1s linear;
 }
 
-@keyframes right {
-    100% {
-        transform: rotate(90deg);
-    }
+.circle .right .progressbar {
+    z-index: 1;
+}
+
+.circle .right .progressbar.active {
+    transform: rotate(-180deg);
+    transition-delay: 1s;
 }
 
 .circle .left {
@@ -107,15 +109,8 @@ body {
     transform: rotate(180deg);
 }
 
-.circle .left .progressbar {
-    animation: left 4s linear both;
-    animation-delay: 4s;
-}
-
-@keyframes left {
-    100% {
-        transform: rotate(0deg);
-    }
+.circle .left .progressbar.active {
+    transform: rotate(-180deg);
 }
 
 
