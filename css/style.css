@@ -9,6 +9,10 @@ body {
     height: 100vh;
 }
 
+.display-none {
+    display: none !important;
+}
+
 .form-control::placeholder {
     font-size: 10px;
 }
