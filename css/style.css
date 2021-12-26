@@ -88,20 +88,8 @@ body {
     height: 100%;
     border-radius: 100%;
     background-color: #EA4D4C;
-    clip: rect(0px, 75px, 150px, 0px);
-}
-
-.circle .progressbar {
+    clip: rect(0px, 150px, 150px, 75px);
     transition: all 1s linear;
-}
-
-.circle .right .progressbar {
-    z-index: 1;
-}
-
-.circle .right .progressbar.active {
-    transform: rotate(-180deg);
-    transition-delay: 1s;
 }
 
 .circle .left {
@@ -109,9 +97,30 @@ body {
     transform: rotate(180deg);
 }
 
-.circle .left .progressbar.active {
-    transform: rotate(-180deg);
+.circle .right .progressbar {
+    z-index: 1;
 }
+
+
+/* .circle .left .progressbar {
+    transform: rotate(-90deg);
+} */
+
+
+/* .circle .progressbar {
+    transition: all linear;
+    transition-duration: 1s;
+} */
+
+
+/* .circle .right .progressbar {
+    transform: rotate(-180deg);
+    transition-delay: 1s;
+}
+
+.circle .left .progressbar {
+    transform: rotate(90deg);
+} */
 
 
 /* ------------------------------------------------------------------------------------------ */
